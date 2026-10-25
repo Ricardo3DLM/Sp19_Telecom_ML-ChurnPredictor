@@ -1,0 +1,45 @@
+Sp19_Contexto
+El operador de telecomunicaciones Interconnect se enfrenta a un desafío crítico: una tasa de cancelación de clientes (Churn) cada vez mayor. 
+El equipo de marketing sabe que retener a un cliente actual es mucho más barato que adquirir uno nuevo. 
+Por ello, quieren implementar un sistema proactivo: si descubrimos a tiempo que un usuario planea irse, se le ofrecerán códigos promocionales y opciones de planes especiales para retenerlo.
+
+El problema es que actualmente no saben a quién ofrecerle estas promociones. Aquí es donde entras tú como Científico de Datos.
+
+Tu objetivo es desarrollar un modelo predictivo que responda a la siguiente pregunta: ¿Este cliente se dará de baja pronto (Sí o No)?
+
+Para desarrollar tu modelo, el equipo de ingeniería de datos ha recopilado el siguiente historial sobre los clientes de la compañía. 
+
+Descripción de los Datos
+Los datos están divididos en cuatro archivos:
+
+contract.csv: Información del contrato (tipo de facturación, método de pago, fechas de inicio y fin).
+personal.csv: Datos demográficos del cliente.
+internet.csv: Información sobre los servicios de Internet contratados (fibra óptica, DSL, antivirus, etc.).
+phone.csv: Información sobre los servicios telefónicos (líneas múltiples).
+Par acceder a los datos dentro de la plataforma, usa la ruta  /datasets/final_provider/.
+
+También puedes descargarlos: final_provider
+
+**Consideraciones:**
+Interconnect ofrece servicios separados. Algunos clientes solo tienen teléfono, otros solo internet, y otros ambos. 
+Cuando unas las tablas, es normal y esperado que se generen valores nulos (NaN) en los servicios que un cliente no contrató. 
+Piensa cómo debes rellenar esos valores nulos para que el modelo entienda que significan la "ausencia de un servicio" y no un error en los datos.
+
+Por otro lado, no encontrarás una columna explícita que se llame "Fuga" o "Churn". Deberás inferir el estado actual del cliente analizando la fecha en la que finalizó su contrato (EndDate).
+
+Si un contrato tiene una fecha de finalización concreta, sabemos qué ocurrió con ese cliente.
+Si en lugar de una fecha dice "No", significa que la historia del cliente con nosotros aún continúa.
+Deberás usar esta lógica para crear tu variable objetivo.
+
+-------------------------------
+'InternetService_FiberOptic',
+'OnlineSecurity',
+'OnlineBackup',
+'DeviceProtection',
+'TechSupport',
+'StreamingTV',
+'StreamingMovies',
+'MultipleLines'
+-------------------------------
+# Requieren Balanceo/Escalado: Distancias/Descenso de Gradiente (Regresión Logística, Redes Neuronales (MLP), SVM (Support Vector Machines), K-Nearest Neighbors (KNN))
+# No Requieren Balanceo/Escalado: Árboles de Decisión (Random Forest, Gradient Boosting, XGBoost, LightGBM, CatBoost)

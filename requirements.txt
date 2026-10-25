@@ -1,0 +1,55 @@
+### Para entornos nuevos:
+### Crear entorno (environment):
+# python -m venv [nombre_de_env]
+#--------------------------------------------
+### Activar entorno:
+# [nombre_de_env]/bin/activate.bat 	(si no funciona, borrar ".bat")
+#--------------------------------------------
+### Revisar requisitons/programas instalados:
+# pip list
+#--------------------------------------------
+### Instalar requisitos:
+# pip install -r requirements.txt
+#--------------------------------------------
+### Para guardar nuevo requirements.txt:
+# pip freeze > requirements.txt
+#--------------------------------------------
+### Para salir de entorno:
+# deactivate
+
+
+# ---- Manipulación y Análisis de Datos ----
+numpy>=1.26.0
+pandas>=2.1.0
+
+# ---- Visualización de Datos ----
+matplotlib>=3.8.0
+seaborn>=0.13.0
+plotly>=5.18.0
+
+# ---- Aprendizaje Automático y Modelado (Machine Learning) ----
+scikit-learn>=1.3.0
+scipy>=1.11.0
+statsmodels>=0.14.0
+
+# ---- Entornos de Trabajo e Interactividad ----
+ipython>=8.18.0
+jupyterlab>=4.0.0
+notebook>=7.0.0
+
+# ---- Utilidades y Conectividad ----
+requests>=2.31.0
+openpyxl>=3.1.0
+sqlalchemy>=2.0.0
+python-dotenv>=1.0.0
+
+### ---- Keras junto con backends específicos (motores) ----
+keras>=3.0.0
+# ---- Deep Learning (Keras + TensorFlow Backend) ----
+tensorflow>=2.16.1
+# ---- Deep Learning (Keras + PyTorch Backend) ----
+torch>=2.1.0
+torchvision>=0.15.0
+# ---- Deep Learning (Keras + JAX Backend) ----
+jax>=0.4.20
+flax>=0.8.0
